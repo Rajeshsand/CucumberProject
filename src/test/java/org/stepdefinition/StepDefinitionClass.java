@@ -1,21 +1,18 @@
 package org.stepdefinition;
 
+import java.util.List;
+
 import org.helper.BaseClass;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.pomframe.TestPojoclass;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.cucumber.datatable.DataTable;
 
 public class StepDefinitionClass extends BaseClass {
 	
-	TestPojoclass text = new TestPojoclass();
-	
+	TestPojoclass text;
 	@Given("To Launch the Compatible Browser and to maximize the browser page")
 	public void to_Launch_the_Compatible_Browser_and_to_maximize_the_browser_page() {
 	    
@@ -32,16 +29,20 @@ public class StepDefinitionClass extends BaseClass {
 	}   
 
 	@When("To validate the username by passing invalid values")
-	public void to_validate_the_username_by_passing_invalid_values() {
-	   
-		txtEnter(text.getTxtEmail(), "Sanrajesh@6699");
+	public void to_validate_the_username_by_passing_invalid_values(DataTable d) {
+	     
+		List<String> as = d.asList();
+		 text = new TestPojoclass();
+		txtEnter(text.getTxtEmail(),as.get(1));
 			
 	}
 
 	@When("To vaidate the password by passing invalid Values in the password field")
-	public void to_vaidate_the_password_by_passing_invalid_Values_in_the_password_field() {
+	public void to_vaidate_the_password_by_passing_invalid_Values_in_the_password_field(DataTable t) {
 
-		txtEnter(text.getTxtPass(), "srk@3699");
+		List<List<String>> asLis = t.asLists();
+		
+		txtEnter(text.getTxtPass(), asLis.get(1).get(1));
 		
 	}
 
