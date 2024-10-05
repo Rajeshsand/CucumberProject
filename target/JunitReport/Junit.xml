@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="6.205134">
-    <testcase classname="To Validate the Login Functionality in  Application" name="To validate the  username and password functionality" time="6.205134">
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="20.48479">
+    <testcase classname="To Validate the Login Functionality in  Application" name="To validate the  username and password functionality" time="20.48479">
         <failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at org.stepdefinitionfiletestcheck.StepDefenesionDataTable.to_vaidate_the_password_by_passing_Values_in_the_password_field(StepDefenesionDataTable.java:47)&#13;&#10;&#9;at ✽.To vaidate the password by passing Values in the password field(file:src/test/resources/LoginFunctionalityUsingDataTable.feature:9)&#13;&#10;">
             <![CDATA[Given To Launch the  Browser and to maximize the Web page...................passed
 When To pass the FB application url in the browser..........................passed

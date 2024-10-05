@@ -72,6 +72,9 @@ public class BaseClass {
     public static void doubleClick() {
 		
     	a.doubleClick().perform();
+    
+    	
+    	
     	
 	}
     
